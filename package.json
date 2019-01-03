@@ -19,13 +19,17 @@
     "lib",
     "README.md"
   ],
-  "main": "src/loader.js",
+  "main": "dist/loader.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boopathi/react-svg-loader.git"
+    "url": "git+https://github.com/TransferGo/react-svg-loader.git"
   },
   "dependencies": {
     "loader-utils": "^1.1.0",
     "react-svg-core": "^2.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
   }
 }
