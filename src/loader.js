@@ -1,9 +1,7 @@
-// @flow
-
 import loaderUtils from "loader-utils";
 import { optimize, transform } from "react-svg-core";
 
-export default function(content: string) {
+export default function(content) {
   const loaderOpts = loaderUtils.getOptions(this) || {};
 
   const cb = this.async();
@@ -11,5 +9,5 @@ export default function(content: string) {
   Promise.resolve(String(content))
     .then(transform({ jsx: loaderOpts.jsx }))
     .then(result => cb(null, result.code))
-    .catch(err => cb(err));
+    .catch(cb);
 }
