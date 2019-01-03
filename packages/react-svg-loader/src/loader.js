@@ -9,7 +9,6 @@ export default function(content: string) {
   const cb = this.async();
 
   Promise.resolve(String(content))
-    .then(optimize(loaderOpts.svgo))
     .then(transform({ jsx: loaderOpts.jsx }))
     .then(result => cb(null, result.code))
     .catch(err => cb(err));
